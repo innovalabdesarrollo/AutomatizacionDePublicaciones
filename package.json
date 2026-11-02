@@ -1,0 +1,24 @@
+{
+  "name": "automatizacion-de-publicaciones",
+  "private": true,
+  "scripts": {
+    "check:node": "node scripts/assert-node-secure.mjs",
+    "predev": "node scripts/assert-node-secure.mjs",
+    "prebuild": "node scripts/assert-node-secure.mjs",
+    "dev": "pnpm -r --parallel run dev",
+    "dev:api": "pnpm --filter api dev",
+    "dev:web": "pnpm --filter web dev",
+    "build": "pnpm -r run build",
+    "start:api": "pnpm --filter api start",
+    "test": "pnpm --filter api test",
+    "test:e2e": "playwright test"
+  },
+
+  "engines": {
+    "node": "24.x"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
